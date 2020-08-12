@@ -11,3 +11,11 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.not-current-month {
+    color: #d2d2d2;
+}
+
+.days {
+    height: 80px !important;
+}

@@ -27,14 +27,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
+                    <tr *ngFor="let data of infoCalendar">
+                        <td class="text-center days" *ngFor="let item of data.days" [ngClass]="{'not-current-month':!item.isActualMonth}">{{item.day}}</td>
                     </tr>
                 </tbody>
             </table>
