@@ -72,4 +72,10 @@ export class CalendarComponent implements OnInit {
     this.initCalendar(this.objElement['formatDate']);
   }
 
+  eventSidebar(){
+    /*$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });*/
+  $('#sidebar').toggleClass('active');
+  }
 }
