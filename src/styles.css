@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+/*CSS Contenedores*/
+
+.display {
+    display: inline-block;
+}
+
+.form-events-container {
+    float: left;
+}
+
+.calendar-container {
+    float: left;
+}
+
+
+/*CSS botones*/
+
 .btn-circle {
     border-radius: 50% !important;
     width: 40px;
@@ -12,10 +30,61 @@
     text-align: center;
 }
 
+.arrow-icon {
+    color: #000;
+    font-weight: bold;
+}
+
+.arrow-icon:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.button-color {
+    background-color: transparent;
+    border: 0;
+}
+
+.button-color:hover {
+    background-color: #6C757D;
+    border: 0;
+    color: #fff;
+}
+
+
+/*CSS Tabla*/
+
+.center-month {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.day-border {
+    border: 1px solid #bbbbc1!important;
+}
+
 .not-current-month {
-    color: #d2d2d2;
+    color: #6C757D;
+    background-color: #E0E0E0;
 }
 
 .days {
     height: 80px !important;
 }
+
+.center {
+    vertical-align: middle!important;
+}
+
+.day-size {
+    height: 4.8rem;
+    width: 9rem;
+}
+
+
+/*@media (max-width:768px) {
+    .day-size {
+        height: 4vh;
+        width: 8vw;
+    }
+}*/

@@ -1,37 +1,46 @@
 <div class="container-fluid">
-    <div class="column">
-        <div class="col-12 mt-3 mb-3">
-            <div class="row">
-                <div class="btn-group mr-2" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary btn-circle mr-1 p-0" (click)="previousMonth()">
-                        <i class="material-icons">keyboard_arrow_left</i>
-                    </button>
-                    <button type="button" class="btn btn-secondary btn-circle p-0" (click)="nextMonth()">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </button>
+    <div class="column display">
+        <div class="col-2 form-events-container">
+            <form action="#" method="post">
+                <div class="event">
+                    <h3>Evento a registrar</h3>
                 </div>
-                <h4>{{objElement['date']}}</h4>
-            </div>
+            </form>
         </div>
-        <div class="col-12">
-            <table class="table table-borderless">
-                <thead>
-                    <tr>
-                        <th class="text-center">Lunes</th>
-                        <th class="text-center">Martes</th>
-                        <th class="text-center">Miercoles</th>
-                        <th class="text-center">Jueves</th>
-                        <th class="text-center">Viernes</th>
-                        <th class="text-center">Sábado</th>
-                        <th class="text-center">Domingo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let data of infoCalendar">
-                        <td class="text-center days" *ngFor="let item of data.days" [ngClass]="{'not-current-month':!item.isActualMonth}">{{item.day}}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-10 calendar-container">
+            <div class="col-12 mt-3 mb-3">
+                <div class="row">
+                    <div class="btn-group mr-2" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-circle mr-1 p-0 button-color" (click)="previousMonth()">
+                        <i class="material-icons arrow-icon">keyboard_arrow_left</i>
+                    </button>
+                        <button type="button" class="btn btn-circle p-0 button-color" (click)="nextMonth()">
+                        <i class="material-icons arrow-icon">keyboard_arrow_right</i>
+                    </button>
+                    </div>
+                    <h4 class="center-month">{{objElement['date']}}</h4>
+                </div>
+            </div>
+            <div class="col-12">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="day-size day-border text-center center">Lunes</th>
+                            <th class="day-size day-border text-center center">Martes</th>
+                            <th class="day-size day-border text-center center">Miercoles</th>
+                            <th class="day-size day-border text-center center">Jueves</th>
+                            <th class="day-size day-border text-center center">Viernes</th>
+                            <th class="day-size day-border text-center center">Sábado</th>
+                            <th class="day-size day-border text-center center">Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of infoCalendar">
+                            <td class="day-size day-border text-center center" *ngFor="let item of data.days" [ngClass]="{'not-current-month':!item.isActualMonth}">{{item.day}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
