@@ -31,6 +31,7 @@
                             "node_modules/lodash/lodash.js",
                             "node_modules/moment/dist/moment.js",
                             "node_modules/moment-range/dist/moment-range.js",
+                            "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.js"
                         ]
                     },
