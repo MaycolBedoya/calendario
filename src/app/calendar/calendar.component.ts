@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import * as _ from 'lodash';
 import * as Moment from 'moment';
 import { extendMoment } from 'moment-range';
 import * as $ from 'jquery';
 const moment = extendMoment(Moment);
 
+@NgModule({
+  imports: [NgbModule]
+})
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -12,6 +17,7 @@ const moment = extendMoment(Moment);
 })
 export class CalendarComponent implements OnInit {
 
+  model: NgbDateStruct;
   objElement = {};
   infoCalendar=[];
   constructor() { }

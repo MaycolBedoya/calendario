@@ -7,7 +7,25 @@
                     <h3>Registrar un Evento</h3>
                 </div>
                 <div class="form-container">
-                    <p>formulario</p>
+                    <form action="#" method="POST">
+
+                        <div class="form-group p-1">
+                            <label for="event-name">Título del Evento</label>
+                            <input type="text" class="form-control" id="eventTitle" placeholder="Ingresa el Título del Evento">
+                        </div>
+                        <div class="form-group p-1">
+                            <label for="event-name">Fecha del Evento</label>
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Ingresa la fecha" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Añadir Evento</button>
+                        </div>
+                    </form>
                 </div>
             </nav>
             <!-- Page Content -->
