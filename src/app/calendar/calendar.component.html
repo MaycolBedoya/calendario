@@ -1,26 +1,32 @@
-<div class="container-fluid">
-    <div class="column ">
-        <div class="wrapper display col-2">
+<div class="container-fluid p-0">
+    <div class="column p-0">
+        <div class="wrapper display col-2 p-0">
             <!-- Sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Registrar un Evento</h3>
+                    <h3 class="sidebar-title">Registrar un Evento</h3>
                 </div>
                 <div class="form-container">
                     <form action="#" method="POST">
 
-                        <div class="form-group p-1">
+                        <div class="form-group m-0 p-1">
                             <label for="event-name">Título del Evento</label>
-                            <input type="text" class="form-control" id="eventTitle" placeholder="Ingresa el Título del Evento">
+                            <input type="text" class="form-control" id="eventTitle" placeholder="Ingresa el título del evento">
                         </div>
-                        <div class="form-group p-1">
+                        <div class="form-group m-0 p-1">
                             <label for="event-name">Fecha del Evento</label>
                             <div class="input-group">
                                 <input class="form-control" placeholder="Ingresa la fecha" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"></button>
+                                    <button class="btn btn-outline-secondary date-button p-0" (click)="d.toggle()" type="button">
+                                        <i class="material-icons center">date_range</i>
+                                    </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-group pt-1 pb-0 pl-1 pr-1">
+                            <label for="event-name">Descripción del Evento</label>
+                            <textarea name="event-description" class="event-description" cols="34" rows="4"></textarea>
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary">Añadir Evento</button>

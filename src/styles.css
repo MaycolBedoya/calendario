@@ -99,13 +99,13 @@
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 270px;
+    max-width: 270px;
     min-height: 100vh;
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -270px;
 }
 
 @media (max-width: 768px) {
@@ -131,4 +131,12 @@ body {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #6d7fcc;
+}
+
+.date-button {
+    width: 40px;
+}
+
+.event-description {
+    border-radius: 0.25rem;
 }
